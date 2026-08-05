@@ -48,19 +48,19 @@ export const Route = createFileRoute("/")({
 
 const signatures = [
   {
-    name: "Country Sourdough",
-    note: "72-hour cold ferment, dark crust, open crumb. Our daily standard.",
-    price: "£5.50",
+    name: "Black Forest",
+    note: "Dark chocolate sponge, kirsch cherries and softly whipped cream.",
+    price: "Rs 190",
   },
   {
-    name: "Cardamom & Sea Salt Bun",
-    note: "Spiced brioche dough, hand-twisted and glazed with Swedish pearl sugar.",
-    price: "£4.20",
+    name: "Red Velvet",
+    note: "Cocoa-buttermilk crumb layered with tangy cream cheese frosting.",
+    price: "Rs 190",
   },
   {
-    name: "Rye & Molasses Loaf",
-    note: "Dense, nutty, and deeply aromatic. Best served with salted butter.",
-    price: "£6.00",
+    name: "Walnut Fudge",
+    note: "Roasted Kashmiri walnuts folded through dense chocolate fudge.",
+    price: "Rs 210",
   },
 ];
 
@@ -88,7 +88,7 @@ function Index() {
         <div className="max-w-screen-xl mx-auto px-6 flex flex-col gap-6">
           <div className="flex flex-col gap-3">
             <span className="text-xs uppercase tracking-[0.2em] text-ink/60 font-medium">
-              Est. 2018 — London
+              Est. 2019 — Srinagar
             </span>
             <h1 className="text-4xl font-serif font-medium leading-tight text-balance">
               The weight of the dough, the heat of the stone.

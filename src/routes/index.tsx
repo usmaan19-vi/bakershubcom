@@ -88,7 +88,7 @@ function Index() {
         <div className="max-w-screen-xl mx-auto px-6 flex flex-col gap-6">
           <div className="flex flex-col gap-3">
             <span className="text-xs uppercase tracking-[0.2em] text-ink/60 font-medium">
-              Est. 2018 — London
+              Est. 2019 — Srinagar
             </span>
             <h1 className="text-4xl font-serif font-medium leading-tight text-balance">
               The weight of the dough, the heat of the stone.

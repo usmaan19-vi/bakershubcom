@@ -64,6 +64,50 @@ const signatures = [
   },
 ];
 
+const reviews = [
+  {
+    name: "Aarif Mir",
+    rating: 5,
+    date: "July 2026",
+    text: "The Black Forest cake was the best I've had in years — moist, rich and not overly sweet. Worth every rupee.",
+    item: "Black Forest",
+  },
+  {
+    name: "Hina Qadri",
+    rating: 5,
+    date: "June 2026",
+    text: "Ordered the Red Velvet for my sister's birthday. The cream cheese frosting was perfect. Everyone asked where it was from.",
+    item: "Red Velvet",
+  },
+  {
+    name: "Bilal Rather",
+    rating: 4,
+    date: "June 2026",
+    text: "Walnut Fudge is dense and decadent, packed with real Kashmiri walnuts. Goes perfectly with a cup of kehwa.",
+    item: "Walnut Fudge",
+  },
+];
+
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5 text-ink/80" aria-label={`${rating} out of 5 stars`}>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <svg
+          key={i}
+          className="size-4"
+          viewBox="0 0 20 20"
+          fill={i <= rating ? "currentColor" : "none"}
+          stroke="currentColor"
+          strokeWidth={1}
+          aria-hidden="true"
+        >
+          <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.73.99-5.79L1.58 7.62l5.82-.85L10 1.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-canvas text-ink font-sans">
@@ -154,6 +198,40 @@ function Index() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="py-16 bg-canvas">
+        <div className="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
+          <div className="flex justify-between items-end border-b border-ink/10 pb-4">
+            <h2 className="text-2xl font-serif font-medium">What our customers say</h2>
+            <span className="text-xs font-medium uppercase tracking-widest text-ink/40">
+              4.8 / 5 average
+            </span>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <figure
+                key={review.name}
+                className="flex flex-col gap-4 p-6 bg-kraft/20 rounded-md outline-1 -outline-offset-1 outline-ink/5"
+              >
+                <div className="flex items-center justify-between">
+                  <Stars rating={review.rating} />
+                  <span className="text-[11px] uppercase tracking-widest text-ink/40">
+                    {review.date}
+                  </span>
+                </div>
+                <blockquote className="text-sm leading-relaxed text-ink/80 text-pretty">
+                  "{review.text}"
+                </blockquote>
+                <figcaption className="mt-auto flex items-center justify-between pt-2 border-t border-ink/10">
+                  <span className="font-medium">{review.name}</span>
+                  <span className="text-xs text-ink/50 italic font-serif">on {review.item}</span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

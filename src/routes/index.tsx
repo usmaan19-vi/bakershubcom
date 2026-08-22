@@ -202,6 +202,40 @@ function Index() {
         </div>
       </section>
 
+      <section id="reviews" className="py-16 bg-canvas">
+        <div className="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
+          <div className="flex justify-between items-end border-b border-ink/10 pb-4">
+            <h2 className="text-2xl font-serif font-medium">What our customers say</h2>
+            <span className="text-xs font-medium uppercase tracking-widest text-ink/40">
+              4.8 / 5 average
+            </span>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <figure
+                key={review.name}
+                className="flex flex-col gap-4 p-6 bg-kraft/20 rounded-md outline-1 -outline-offset-1 outline-ink/5"
+              >
+                <div className="flex items-center justify-between">
+                  <Stars rating={review.rating} />
+                  <span className="text-[11px] uppercase tracking-widest text-ink/40">
+                    {review.date}
+                  </span>
+                </div>
+                <blockquote className="text-sm leading-relaxed text-ink/80 text-pretty">
+                  "{review.text}"
+                </blockquote>
+                <figcaption className="mt-auto flex items-center justify-between pt-2 border-t border-ink/10">
+                  <span className="font-medium">{review.name}</span>
+                  <span className="text-xs text-ink/50 italic font-serif">on {review.item}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
           <div className="grid gap-6">

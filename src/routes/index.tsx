@@ -64,6 +64,50 @@ const signatures = [
   },
 ];
 
+const reviews = [
+  {
+    name: "Aarif Mir",
+    rating: 5,
+    date: "July 2026",
+    text: "The Black Forest cake was the best I've had in years — moist, rich and not overly sweet. Worth every rupee.",
+    item: "Black Forest",
+  },
+  {
+    name: "Hina Qadri",
+    rating: 5,
+    date: "June 2026",
+    text: "Ordered the Red Velvet for my sister's birthday. The cream cheese frosting was perfect. Everyone asked where it was from.",
+    item: "Red Velvet",
+  },
+  {
+    name: "Bilal Rather",
+    rating: 4,
+    date: "June 2026",
+    text: "Walnut Fudge is dense and decadent, packed with real Kashmiri walnuts. Goes perfectly with a cup of kehwa.",
+    item: "Walnut Fudge",
+  },
+];
+
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5 text-ink/80" aria-label={`${rating} out of 5 stars`}>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <svg
+          key={i}
+          className="size-4"
+          viewBox="0 0 20 20"
+          fill={i <= rating ? "currentColor" : "none"}
+          stroke="currentColor"
+          strokeWidth={1}
+          aria-hidden="true"
+        >
+          <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.73.99-5.79L1.58 7.62l5.82-.85L10 1.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-canvas text-ink font-sans">

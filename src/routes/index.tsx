@@ -210,6 +210,34 @@ function Index() {
 
             <div className="flex flex-col gap-4">
               <span className="text-xs uppercase tracking-widest text-canvas/50 font-medium">
+                Find Us
+              </span>
+              <div className="overflow-hidden rounded-md outline-1 -outline-offset-1 outline-canvas/10">
+                <iframe
+                  title="Bakers Hub location on Google Maps"
+                  src="https://maps.google.com/maps?q=General%20Bus%20Stand%2C%20Anantnag%2C%20Jammu%20%26%20Kashmir&z=15&output=embed"
+                  width="100%"
+                  height="320"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="block w-full border-0"
+                />
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=General%20Bus%20Stand%2C%20Anantnag%2C%20Jammu%20%26%20Kashmir"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-canvas/80 hover:text-canvas transition-colors w-fit"
+              >
+                Open in Google Maps
+                <svg className="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5h5v5m0-5L9 15m-4 0v5h5" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <span className="text-xs uppercase tracking-widest text-canvas/50 font-medium">
                 Service Hours
               </span>
               <div className="flex flex-col gap-2">

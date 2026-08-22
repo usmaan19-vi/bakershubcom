@@ -12,13 +12,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Bakers Hub is a neighbourhood bakery in Hackney, London: long-fermentation sourdough, laminated pastries and heritage grains, baked fresh every morning.",
+          "Bakers Hub is a neighbourhood bakery near General Bus Stand, Anantnag, Jammu & Kashmir: long-fermentation sourdough, laminated pastries and heritage grains, baked fresh every morning.",
       },
       { property: "og:title", content: "Bakers Hub — Slow-Fermented Sourdough & Pastries" },
       {
         property: "og:description",
         content:
-          "Long-fermentation sourdough and hand-laminated pastries, baked fresh daily in Hackney, London.",
+          "Long-fermentation sourdough and hand-laminated pastries, baked fresh daily near General Bus Stand, Anantnag, Jammu & Kashmir.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },

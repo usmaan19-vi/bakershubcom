@@ -34,10 +34,10 @@ export const Route = createFileRoute("/")({
           name: "Bakers Hub",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "128 Artisans Row",
-            addressLocality: "Hackney, London",
-            postalCode: "E8 4PT",
-            addressCountry: "GB",
+            streetAddress: "General Bus Stand",
+            addressLocality: "Anantnag",
+            addressRegion: "Jammu and Kashmir",
+            addressCountry: "IN",
           },
           openingHours: ["Mo-Fr 07:30-15:00", "Sa-Su 08:30-16:00"],
         }),
@@ -200,11 +200,11 @@ function Index() {
                 The Bakery
               </span>
               <address className="text-lg leading-snug font-serif not-italic">
-                128 Artisans Row
+                General Bus Stand
                 <br />
-                Hackney, London
+                Anantnag
                 <br />
-                E8 4PT
+                Jammu & Kashmir
               </address>
             </div>
 

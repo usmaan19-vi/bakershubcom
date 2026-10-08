@@ -7,6 +7,9 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+    // Matches the GitHub Pages repository path so client-side navigation
+    // works when the site is served from https://<user>.github.io/bakershubcom/
+    basepath: "/bakershubcom",
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,

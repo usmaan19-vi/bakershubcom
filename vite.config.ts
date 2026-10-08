@@ -19,5 +19,6 @@ export default defineConfig({
     // site can be hosted on GitHub Pages with no server runtime.
     pages: [{ path: "/" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
+    router: { basepath: "/bakershubcom" },
   },
 });

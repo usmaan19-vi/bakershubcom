@@ -7,9 +7,17 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    // GitHub Pages serves this repo from https://<user>.github.io/bakershubcom/
+    base: "/bakershubcom/",
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Static export: prerender the home route to plain HTML at build time so the
+    // site can be hosted on GitHub Pages with no server runtime.
+    pages: [{ path: "/" }],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
 });
